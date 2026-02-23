@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+  </head>
+  <body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <div class="Login pt-69">
+      <div class="Login-Logo">
+        <img class="mx-auto" src="./assets/Logo-full.png" alt="" />
+      </div>
+
+      <!-- login form -->
+
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto mt-11 rounded-2xl"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-bold text-neutral">Mobile</label>
+            <input
+              id="mobile-number"
+              type="text"
+              class="input rounded-full"
+              maxlength="11"
+              minlength="11"
+              placeholder="Enter your number"
+            />
+            <label class="label font-bold text-neutral">Pin</label>
+            <input
+              id="inputPin"
+              type="password"
+              maxlength="4"
+              minlength="4"
+              class="input rounded-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+
+            <button id="login-btn" class="btn btn-primary rounded-full mt-4">
+              Login
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("login-btn")
+        .addEventListener("click", function () {
+          const number = document.getElementById("mobile-number").value;
+          const pin = document.getElementById("inputPin").value;
+          console.log(number, pin);
+
+          if (number == "01234567890" && pin == "1234") {
+            alert("login success");
+
+            // window.location.assign("/home.html");
+          } else {
+            alert("something went wrong");
+            return;
+          }
+        });
+    </script>
+  </body>
+</html>
