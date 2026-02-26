@@ -43,6 +43,7 @@
     </style>
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <!-- navbar section (contains) ->  logout & payoo logo -->
     <header class="border-b-2 border-gray-300 sticky top-0 bg-base-200 z-10">
       <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <div class="left flex items-center">
@@ -64,6 +65,7 @@
       </section>
     </header>
 
+    <!-- different option buttons section  -->
     <section class="w-11/12 mx-auto py-10 space-y-5">
       <h2 class="text-3xl font-bold">
         Welcome to Pay<span class="text-primary">oo</span>
@@ -106,6 +108,7 @@
           <p>Pay Bill</p>
         </button>
         <button
+          onclick="showById('history')"
           class="btn flex-col h-[83px] py-4 btn-primary btn-soft rounded-xl"
         >
           <img src="assets/opt-6.png" alt="" />
@@ -114,6 +117,7 @@
       </div>
     </section>
 
+    <!-- cash out section -->
     <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold mb-5">Cashout</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
@@ -159,6 +163,7 @@
       </div>
     </section>
 
+    <!-- add money section -->
     <section id="add-money">
       <h2 class="text-xl font-bold mb-5">Add Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
@@ -219,6 +224,15 @@
           </fieldset>
         </div>
       </div>
+    </section>
+
+    <!-- history section -> Transactions -->
+    <section id="history">
+      <h2 class="text-xl font-bold mb-5">Transactions</h2>
+      <div
+        id="history-transaction"
+        class="ccard bg-base-100 w-full max-w-[400px] shadow rounded-2xl mb-10 mx-auto space-y-1"
+      ></div>
     </section>
 
     <!-- Script files links -->
