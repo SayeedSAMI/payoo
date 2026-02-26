@@ -13,8 +13,26 @@ function getBalance() {
   return Number(balance);
 }
 
-// machine ->take value input and  set balance
+// machine ->take value input and  Set balance
 function setBalance(value) {
   const balanceElement = document.getElementById("balance");
   balanceElement.innerText = value;
+}
+
+// machine id > hide all > show id
+function showById(id) {
+  const addMoney = document.getElementById("add-money");
+  const cashOut = document.getElementById("cashout");
+
+  addMoney.classList.add("hidden");
+  cashOut.classList.add("hidden");
+
+  const select = document.getElementById(id);
+  select.classList.remove("hidden");
+
+  // if (id == addMoney) {
+  //   addMoney.classList.remove("hidden");
+  // } else if (id == cashOut) {
+  //   cashOut.classList.remove("hidden");
+  // }
 }
